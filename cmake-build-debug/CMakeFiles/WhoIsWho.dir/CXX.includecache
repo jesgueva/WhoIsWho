@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/testing.cpp
+iostream
+-
+
