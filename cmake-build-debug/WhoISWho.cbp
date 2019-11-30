@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/testing.cpp">
+		<Unit filename="/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Game.cpp">
 			<Option target="WhoIsWho"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/CMakeLists.txt">

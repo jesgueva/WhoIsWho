@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Character.h"
 #include "fstream"
+#include <cstdlib>
 
 #ifndef WHOISWHO_BOARD_H
 #define WHOISWHO_BOARD_H
@@ -34,7 +35,7 @@ class Board{
         int numWins;
         bool done = true;
         while(file.eof()){
-            Character *newCharacter;
+
             getline(file, name);
             getline(file, origin);
             getline(file, isDeadTemp);
@@ -44,6 +45,7 @@ class Board{
             getline(file, numwinsTemp);
 
             if(typeTemp == "actor"){
+                Actor *newCharacter;
                 newCharacter = new Actor();
                 newCharacter->setName(name);
                 newCharacter->setOrigin(origin);
@@ -51,11 +53,22 @@ class Board{
                 newCharacter->setIsMarried(isMarried);
                 newCharacter->setType(typeTemp);
                 newCharacter->setGenre(genreTemp);
-
+                newCharacter->setOscars(atoi(numwinsTemp.c_str()));
+                board.push_back(*newCharacter);
 
             } else if(typeTemp == "singer"){
+                Singer *newCharacter;
                 newCharacter = new Singer();
+                newCharacter->setName(name);
+                newCharacter->setOrigin(origin);
+                newCharacter->setIsDead(isDeadTemp);
+                newCharacter->setIsMarried(isMarried);
+                newCharacter->setType(typeTemp);
+                newCharacter->setGenre(genreTemp);
+                newCharacter->setGrammyAwards(atoi(numwinsTemp.c_str()));
+                board.push_back(*newCharacter);
             }
+
 
         }
 

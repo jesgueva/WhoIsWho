@@ -136,7 +136,7 @@ private:
     int oscars;
 
 public:
-    Actor(){
+    Actor():Character(){
 
     }
     Actor(string name, string origin, bool isDead, bool isMarried, CharacterType type, string gen, int oscars):Character(name, origin, isDead, isMarried, type){
