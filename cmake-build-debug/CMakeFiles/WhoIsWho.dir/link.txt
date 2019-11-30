@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/WhoIsWho.dir/testing.cpp.o  -o WhoIsWho.exe -Wl,--out-implib,libWhoIsWho.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/WhoIsWho.dir/Game.cpp.o  -o WhoIsWho.exe -Wl,--out-implib,libWhoIsWho.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

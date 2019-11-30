@@ -123,32 +123,32 @@ WhoIsWho/fast:
 	$(MAKE) -f CMakeFiles/WhoIsWho.dir/build.make CMakeFiles/WhoIsWho.dir/build
 .PHONY : WhoIsWho/fast
 
-testing.o: testing.cpp.o
+Game.o: Game.cpp.o
 
-.PHONY : testing.o
+.PHONY : Game.o
 
 # target to build an object file
-testing.cpp.o:
-	$(MAKE) -f CMakeFiles/WhoIsWho.dir/build.make CMakeFiles/WhoIsWho.dir/testing.cpp.o
-.PHONY : testing.cpp.o
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/WhoIsWho.dir/build.make CMakeFiles/WhoIsWho.dir/Game.cpp.o
+.PHONY : Game.cpp.o
 
-testing.i: testing.cpp.i
+Game.i: Game.cpp.i
 
-.PHONY : testing.i
+.PHONY : Game.i
 
 # target to preprocess a source file
-testing.cpp.i:
-	$(MAKE) -f CMakeFiles/WhoIsWho.dir/build.make CMakeFiles/WhoIsWho.dir/testing.cpp.i
-.PHONY : testing.cpp.i
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/WhoIsWho.dir/build.make CMakeFiles/WhoIsWho.dir/Game.cpp.i
+.PHONY : Game.cpp.i
 
-testing.s: testing.cpp.s
+Game.s: Game.cpp.s
 
-.PHONY : testing.s
+.PHONY : Game.s
 
 # target to generate assembly for a file
-testing.cpp.s:
-	$(MAKE) -f CMakeFiles/WhoIsWho.dir/build.make CMakeFiles/WhoIsWho.dir/testing.cpp.s
-.PHONY : testing.cpp.s
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/WhoIsWho.dir/build.make CMakeFiles/WhoIsWho.dir/Game.cpp.s
+.PHONY : Game.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... WhoIsWho"
 	@echo "... edit_cache"
-	@echo "... testing.o"
-	@echo "... testing.i"
-	@echo "... testing.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
 .PHONY : help
 
 

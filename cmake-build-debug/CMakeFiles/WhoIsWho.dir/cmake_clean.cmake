@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/WhoIsWho.dir/testing.cpp.o"
+  "CMakeFiles/WhoIsWho.dir/Game.cpp.o"
   "WhoIsWho.exe"
   "WhoIsWho.pdb"
   "libWhoIsWho.dll.a"

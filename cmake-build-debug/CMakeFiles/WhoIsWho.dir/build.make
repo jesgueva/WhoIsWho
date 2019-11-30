@@ -57,27 +57,27 @@ include CMakeFiles/WhoIsWho.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/WhoIsWho.dir/flags.make
 
-CMakeFiles/WhoIsWho.dir/testing.cpp.o: CMakeFiles/WhoIsWho.dir/flags.make
-CMakeFiles/WhoIsWho.dir/testing.cpp.o: ../testing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WhoIsWho.dir/testing.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhoIsWho.dir/testing.cpp.o -c "/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/testing.cpp"
+CMakeFiles/WhoIsWho.dir/Game.cpp.o: CMakeFiles/WhoIsWho.dir/flags.make
+CMakeFiles/WhoIsWho.dir/Game.cpp.o: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WhoIsWho.dir/Game.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WhoIsWho.dir/Game.cpp.o -c "/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Game.cpp"
 
-CMakeFiles/WhoIsWho.dir/testing.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WhoIsWho.dir/testing.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/testing.cpp" > CMakeFiles/WhoIsWho.dir/testing.cpp.i
+CMakeFiles/WhoIsWho.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WhoIsWho.dir/Game.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Game.cpp" > CMakeFiles/WhoIsWho.dir/Game.cpp.i
 
-CMakeFiles/WhoIsWho.dir/testing.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WhoIsWho.dir/testing.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/testing.cpp" -o CMakeFiles/WhoIsWho.dir/testing.cpp.s
+CMakeFiles/WhoIsWho.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WhoIsWho.dir/Game.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Game.cpp" -o CMakeFiles/WhoIsWho.dir/Game.cpp.s
 
 # Object files for target WhoIsWho
 WhoIsWho_OBJECTS = \
-"CMakeFiles/WhoIsWho.dir/testing.cpp.o"
+"CMakeFiles/WhoIsWho.dir/Game.cpp.o"
 
 # External object files for target WhoIsWho
 WhoIsWho_EXTERNAL_OBJECTS =
 
-WhoIsWho.exe: CMakeFiles/WhoIsWho.dir/testing.cpp.o
+WhoIsWho.exe: CMakeFiles/WhoIsWho.dir/Game.cpp.o
 WhoIsWho.exe: CMakeFiles/WhoIsWho.dir/build.make
 WhoIsWho.exe: CMakeFiles/WhoIsWho.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable WhoIsWho.exe"

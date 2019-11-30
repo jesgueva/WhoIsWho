@@ -3,4 +3,4 @@ project(WhoIsWho)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(WhoIsWho testing.cpp)
+add_executable(WhoIsWho Game.cpp)

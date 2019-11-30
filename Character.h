@@ -53,11 +53,28 @@ public:
         this->isDead = isDead;
     }
 
+    void setIsDead(string isDead){
+        this->isDead = stringToBool(isDead);
+    }
+    bool stringToBool(stirng logic){
+        if(logic == "0"){
+            return false;
+        } else if(logic == "1"){
+            return true;
+        } else{
+            throw invalid_argument(isDead + " is a wrong input.");
+        }
+    }
+
     bool getIsMarried(){
         return isMarried;
     }
     void setIsMarried(bool isMarried){
         this->isMarried = isMarried;
+    }
+
+    void setIsMarried(string isMarried){
+        this->isMarried = stringToBool(isMarried);
     }
     CharacterType getType(){
         return type;
@@ -65,25 +82,38 @@ public:
     void setType(CharacterType type){
         this->type = type;
     }
+    void setType(string type){
+        if(type == "actor"){
+            this->type = actor;
+        } else if(type == "singer"){
+            this->type = singer;
+        } else{
+            throw invalid_argument(type + " wrong input");
+        }
+    }
 };
 
 class Singer:public Character{
 public:
-    enum Genre{rock, pop};
+    enum Genre{rock, pop, size = 2};
+    string GenreString[5] = {"Rock", "Pop"};
 private:
 
-    Genre gen;
+    string gen;
     int grammyAwards;
 
 public:
-    Singer(string name, string origin, bool isDead, bool isMarried, CharacterType type, Genre gen, int grammyAwards):Character(name, origin, isDead, isMarried, type){
+    Singer(){
+
+    }
+    Singer(string name, string origin, bool isDead, bool isMarried, CharacterType type, string gen, int grammyAwards):Character(name, origin, isDead, isMarried, type){
         this->gen = gen;
         this->grammyAwards = grammyAwards;
     }
-    Genre getGenre(){
+    string getGenre(){
         return gen;
     }
-    void setGenre(Genre genre){
+    void setGenre(string genre){
         gen = genre;
     }
 
@@ -95,8 +125,40 @@ public:
         grammyAwards = numGrammyAwards;
     }
 
+};
+
+class Actor:public Character{
+public:
+    string Genre[5] = {"Rock", "pop"};
+private:
+
+    string gen;
+    int oscars;
+
+public:
+    Actor(){
+
+    }
+    Actor(string name, string origin, bool isDead, bool isMarried, CharacterType type, string gen, int oscars):Character(name, origin, isDead, isMarried, type){
+        this->gen = gen;
+        this->oscars = oscars;
+    }
+    string getGenre(){
+        return gen;
+    }
+    void setGenre(string genre){
+        gen = genre;
+    }
 
 
+
+    int getOscars(){
+        return oscars;
+    }
+
+    void setOscars(int numoscars){
+        oscars = numoscars;
+    }
 };
 
 #endif //WHOISWHO_CHARACTER_H
