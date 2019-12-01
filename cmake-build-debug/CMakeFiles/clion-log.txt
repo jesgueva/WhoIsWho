@@ -1,4 +1,4 @@
-C:\Users\esguevaj\.CLion2019.2\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho"
+"C:\Program Files\JetBrains\CLion 2019.2.5\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "C:\Users\esguevaj\OneDrive - Wentworth Institute of Technology\3Junior\5ObjectOrientedProgramming\WhoIsWho"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /cygdrive/c/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/cmake-build-debug
+-- Build files have been written to: C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/cmake-build-debug

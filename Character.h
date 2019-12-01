@@ -56,7 +56,7 @@ public:
     void setIsDead(string isDead){
         this->isDead = stringToBool(isDead);
     }
-    bool stringToBool(stirng logic){
+    bool stringToBool(string logic){
         if(logic == "0"){
             return false;
         } else if(logic == "1"){
