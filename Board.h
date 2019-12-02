@@ -27,7 +27,7 @@ public:
     void populateBoard(){
         ifstream file("files/characters.txt");
         if (!file.is_open()) {
-            cout << "File error. Check name/location.\n";
+            cout << "Characters file error. Check name/location.\n";
             exit(5);
         }
         string name;

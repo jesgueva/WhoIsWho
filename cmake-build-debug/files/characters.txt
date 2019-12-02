@@ -1,0 +1,168 @@
+2pac Shakur
+American
+1
+0
+Singer
+0
+Rap
+50 Cent
+American
+0
+0
+Singer
+1
+Rap
+Adam Sandler
+American
+0
+1
+Actor
+0
+Comedy
+Al Pacino
+American
+0
+0
+Actor
+0
+Action
+Alicia Keys
+American
+0
+1
+Singer
+15
+R&B
+Amy Winehouse
+English
+1
+0
+singer
+2
+R&B
+Ben Kingsley
+English
+0
+1
+Actor
+1
+Action
+Bob Geldof
+Irish
+0
+1
+Singer
+0
+Rock
+Bruce Springsteen
+American
+0
+1
+Singer
+12
+Rock
+Bruno Mars
+American
+0
+1
+Singer
+10
+Pop
+Cate Blanchett
+Australian
+0
+1
+Actor
+0
+Drama
+Cee Lo Green
+American
+0
+0
+Singer
+3
+R&B
+Daniel Craig
+English
+0
+1
+Actor
+0
+Action
+Demi Lovato
+American
+0
+0
+Singer
+0
+Pop
+Bar Rafaeli
+Israeli
+0
+1
+Actor
+0
+Action
+Dr. Dre
+American
+0
+1
+Singer
+6
+Rap
+Drew Barrymore
+American
+0
+0
+Actor
+0
+Comedy
+Elton John
+English
+0
+1
+Singer
+5
+Rock
+Eminem
+American
+0
+0
+Singer
+15
+Rap
+Freddie Mercury
+English
+1
+0
+Singer
+0
+Rock
+George Michael
+English
+1
+0
+Singer
+2
+R&B
+Honey Boo Boo
+American
+0
+0
+Actor
+0
+Reality TV
+Hugh Jackman
+Australian
+0
+1
+Actor
+0
+Action
+Josh Homme
+American
+0
+1
+Singer
+1
+Rock

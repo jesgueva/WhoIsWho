@@ -40,7 +40,7 @@ bool init(SDL_Window *window, SDL_Renderer *renderer) {
                 success = false;
             } else {
                 //Initialize renderer color
-                SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
+                SDL_SetRenderDrawColor(renderer, 0xFF, 0xC9, 0xFF, 0xFF);
 
                 //Initialize PNG and JPG loading
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
@@ -125,8 +125,8 @@ int main(int argc, char *args[]) {
                 quit = quitProgram(e);
             }
 
-            SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-            //SDL_RenderClear( renderer );
+            SDL_SetRenderDrawColor(renderer, 0xFF, 0xC9, 0xFF, 0xFF);
+            SDL_RenderClear( renderer );
 
             //Update screen
             SDL_RenderPresent(renderer);
