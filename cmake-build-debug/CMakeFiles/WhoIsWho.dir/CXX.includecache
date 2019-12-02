@@ -6,11 +6,37 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Game.cpp
-stdio.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Board.h
+list
 -
+iostream
+-
+Character.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Character.h
+fstream
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/fstream
+cstdlib
+-
+
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Character.h
+string
+-
+iostream
+-
+
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Game.cpp
 SDL2/SDL.h
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL.h
+SDL2/SDL_image.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_image.h
+SDL2/SDL_ttf.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_ttf.h
+stdio.h
+-
+string
+-
+Board.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/Board.h
 
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL.h
 SDL_main.h
@@ -267,6 +293,16 @@ C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOr
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_hints.h
 SDL_stdinc.h
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_stdinc.h
+begin_code.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/begin_code.h
+close_code.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/close_code.h
+
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_image.h
+SDL.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL.h
+SDL_version.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_version.h
 begin_code.h
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/begin_code.h
 close_code.h
@@ -585,6 +621,14 @@ SDL_error.h
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_error.h
 SDL_video.h
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_video.h
+begin_code.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/begin_code.h
+close_code.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/close_code.h
+
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL_ttf.h
+SDL.h
+C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/SDL.h
 begin_code.h
 C:/Users/esguevaj/OneDrive - Wentworth Institute of Technology/3Junior/5ObjectOrientedProgramming/WhoIsWho/SDL2/begin_code.h
 close_code.h

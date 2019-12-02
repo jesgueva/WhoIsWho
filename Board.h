@@ -11,15 +11,25 @@
 #define WHOISWHO_BOARD_H
 class Board{
     list<Character> board;
-
+public:
     Board(){
         populateBoard();
     }
 
+    void printBoard(){
+        list<Character>::iterator iter;
+        for(iter = board.begin(); iter != board.end(); iter++){
+            iter->print();
+        }
+    }
+
+
     void populateBoard(){
-        ifstream file("characters.txt");
-        if (!file.is_open())
+        ifstream file("files/characters.txt");
+        if (!file.is_open()) {
             cout << "File error. Check name/location.\n";
+            exit(5);
+        }
         string name;
         string origin;
         string isDeadTemp;
@@ -27,45 +37,38 @@ class Board{
         string typeTemp;
         string genreTemp;
         string numwinsTemp;
-
-        bool isDead;
-        bool isMarried;
-        Character::CharacterType type;
-        string genre;
-        int numWins;
-        bool done = true;
-        while(file.eof()){
-
+        while(!file.eof()){
+            Character * newCharacter;
             getline(file, name);
             getline(file, origin);
             getline(file, isDeadTemp);
             getline(file, isMarriedTemp);
             getline(file, typeTemp);
-            getline(file, genreTemp);
             getline(file, numwinsTemp);
+            getline(file, genreTemp);
 
-            if(typeTemp == "actor"){
-                Actor *newCharacter;
-                newCharacter = new Actor();
-                newCharacter->setName(name);
-                newCharacter->setOrigin(origin);
-                newCharacter->setIsDead(isDeadTemp);
-                newCharacter->setIsMarried(isMarried);
-                newCharacter->setType(typeTemp);
-                newCharacter->setGenre(genreTemp);
-                newCharacter->setOscars(atoi(numwinsTemp.c_str()));
+            if(typeTemp == "Actor" || typeTemp == "actor"){
+                //Actor *newCharacter;
+                newCharacter = new Actor(name, origin, isDeadTemp, isMarriedTemp, typeTemp, genreTemp, atoi(numwinsTemp.c_str()));
+//                newCharacter->setName(name);
+//                newCharacter->setOrigin(origin);
+//                newCharacter->setIsDead(isDeadTemp);
+//                newCharacter->setIsMarried(isMarriedTemp);
+//                newCharacter->setType(typeTemp);
+//                newCharacter->setGenre(genreTemp);
+//                newCharacter->setOscars(atoi(numwinsTemp.c_str()));
                 board.push_back(*newCharacter);
 
-            } else if(typeTemp == "singer"){
-                Singer *newCharacter;
-                newCharacter = new Singer();
-                newCharacter->setName(name);
-                newCharacter->setOrigin(origin);
-                newCharacter->setIsDead(isDeadTemp);
-                newCharacter->setIsMarried(isMarried);
-                newCharacter->setType(typeTemp);
-                newCharacter->setGenre(genreTemp);
-                newCharacter->setGrammyAwards(atoi(numwinsTemp.c_str()));
+            } else if(typeTemp == "Singer" || typeTemp == "singer"){
+                //Singer *newCharacter;
+                newCharacter = new Singer(name, origin, isDeadTemp, isMarriedTemp, typeTemp, genreTemp, atoi(numwinsTemp.c_str()));
+//                newCharacter->setName(name);
+//                newCharacter->setOrigin(origin);
+//                newCharacter->setIsDead(isDeadTemp);
+//                newCharacter->setIsMarried(isMarriedTemp);
+//                newCharacter->setType(typeTemp);
+//                newCharacter->setGenre(genreTemp);
+//                newCharacter->setGrammyAwards(atoi(numwinsTemp.c_str()));
                 board.push_back(*newCharacter);
             }
 

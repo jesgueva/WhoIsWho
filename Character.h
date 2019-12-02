@@ -3,6 +3,8 @@
 //
 
 #include <string>
+#include <iostream>
+
 using namespace std;
 #ifndef WHOISWHO_CHARACTER_H
 #define WHOISWHO_CHARACTER_H
@@ -42,7 +44,7 @@ public:
     }
 
     void setOrigin(string origin){
-        this->origin;
+        this->origin = origin;
     }
 
     bool getIsDead(){
@@ -83,20 +85,23 @@ public:
         this->type = type;
     }
     void setType(string type){
-        if(type == "actor"){
+        if(type == "Actor" || type == "actor"){
             this->type = actor;
-        } else if(type == "singer"){
+        } else if(type == "Singer" || type == "singer"){
             this->type = singer;
         } else{
             throw invalid_argument(type + " wrong input");
         }
     }
+
+    virtual void print(){
+        cout<<"Name: " << name << " Origin: " << origin << " isDead: " << isDead << " isMarried: " << isMarried << " type: " << type<<endl;
+    }
 };
 
 class Singer:public Character{
-public:
-    enum Genre{rock, pop, size = 2};
-    string GenreString[5] = {"Rock", "Pop"};
+//public:
+//    string GenreString[4] = {"Rap", "R&B", "Rock", "Pop"};
 private:
 
     string gen;
@@ -107,6 +112,15 @@ public:
 
     }
     Singer(string name, string origin, bool isDead, bool isMarried, CharacterType type, string gen, int grammyAwards):Character(name, origin, isDead, isMarried, type){
+        this->gen = gen;
+        this->grammyAwards = grammyAwards;
+    }
+    Singer(string name, string origin, string isDead, string isMarried, string type, string gen, int grammyAwards){
+        setName(name);
+        setOrigin(origin);
+        setIsDead(isDead);
+        setIsMarried(isMarried);
+        setType(type);
         this->gen = gen;
         this->grammyAwards = grammyAwards;
     }
@@ -125,11 +139,16 @@ public:
         grammyAwards = numGrammyAwards;
     }
 
+    void print(){
+        cout<<"Name12: " << getName() << " Origin: " << getOrigin() << " isDead: " << getIsDead() << " isMarried: " << getIsMarried() << " type: " << getType()
+        << " Genre: " << gen << " GrammyAwards: " << grammyAwards <<endl;
+    }
+
 };
 
 class Actor:public Character{
-public:
-    string Genre[5] = {"Rock", "pop"};
+//public:
+//    string Genre[5] = {"Action", "Reality TV", "Comedy", "Drama"};
 private:
 
     string gen;
@@ -143,6 +162,15 @@ public:
         this->gen = gen;
         this->oscars = oscars;
     }
+    Actor(string name, string origin, string isDead, string isMarried, string type, string gen, int oscars){
+        setName(name);
+        setOrigin(origin);
+        setIsDead(isDead);
+        setIsMarried(isMarried);
+        setType(type);
+        this->gen = gen;
+        this->oscars = oscars;
+    }
     string getGenre(){
         return gen;
     }
@@ -150,14 +178,17 @@ public:
         gen = genre;
     }
 
-
-
     int getOscars(){
         return oscars;
     }
 
     void setOscars(int numoscars){
         oscars = numoscars;
+    }
+
+    void print(){
+        cout<<"Name: " << getName() << " Origin: " << getOrigin() << " isDead: " << getIsDead() << " isMarried: " << getIsMarried() << " type: " << getType()
+            << " Genre: " << gen << " GrammyAwards: " << oscars <<endl;
     }
 };
 
