@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <string>
 #include "Board.h"
+#include "LTexture.h"
 
 //Screen dimension constants
 const int SCREEN_WIDTH = 640;
@@ -40,7 +41,7 @@ bool init(SDL_Window *window, SDL_Renderer *renderer) {
                 success = false;
             } else {
                 //Initialize renderer color
-                SDL_SetRenderDrawColor(renderer, 0xFF, 0xC9, 0xFF, 0xFF);
+                SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
 
                 //Initialize PNG and JPG loading
                 int imgFlags = IMG_INIT_PNG | IMG_INIT_JPG;
@@ -63,18 +64,22 @@ bool init(SDL_Window *window, SDL_Renderer *renderer) {
 }
 
 void loadImage(string imagePath) {
-    SDL_Surface *image;
-    image = IMG_Load(imagePath.c_str());
-    if(image == NULL){
+    SDL_Surface *imageSurface = IMG_Load(imagePath.c_str());
+    if(imageSurface == NULL){
         printf("Image loading of %s failed.\nError: %s\n", imagePath.c_str(), IMG_GetError());
+    } else{
+        SDL_SetColorKey(imageSurface, SDL_TRUE, SDL_MapRGB( imageSurface->format, 0, 0xFF, 0xFF));
+
     }
+
+
 
 
 }
 
-void close(SDL_Window *window, SDL_Renderer *renderer) {
+void close(SDL_Window *window, SDL_Renderer *renderer, LTexture texture) {
     //Free loaded images
-    //gTextTexture.free();
+    texture.free();
 
     //Free global font
 //    TTF_CloseFont( gFont );
@@ -93,10 +98,7 @@ void close(SDL_Window *window, SDL_Renderer *renderer) {
 }
 
 bool quitProgram(SDL_Event e) {
-    if (e.type == SDL_QUIT) {
-        return true;
-    }
-    return false;
+    return e.type == SDL_QUIT;
 }
 
 int main(int argc, char *args[]) {
@@ -109,6 +111,7 @@ int main(int argc, char *args[]) {
     //Initialize main variables
     SDL_Window *myWindow = NULL;
     SDL_Renderer *renderer = NULL;
+    LTexture texture;
 
     //Start up SDL and create window
     if (!init(myWindow, renderer)) {
@@ -135,6 +138,6 @@ int main(int argc, char *args[]) {
 
 
     //Free resources and close SDL
-    close(myWindow, renderer);
+    close(myWindow, renderer, texture);
     return 0;
 }

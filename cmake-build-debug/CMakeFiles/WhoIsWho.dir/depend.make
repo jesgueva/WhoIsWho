@@ -4,6 +4,7 @@
 CMakeFiles/WhoIsWho.dir/Game.cpp.obj: ../Board.h
 CMakeFiles/WhoIsWho.dir/Game.cpp.obj: ../Character.h
 CMakeFiles/WhoIsWho.dir/Game.cpp.obj: ../Game.cpp
+CMakeFiles/WhoIsWho.dir/Game.cpp.obj: ../LTexture.h
 CMakeFiles/WhoIsWho.dir/Game.cpp.obj: ../SDL2/SDL.h
 CMakeFiles/WhoIsWho.dir/Game.cpp.obj: ../SDL2/SDL_assert.h
 CMakeFiles/WhoIsWho.dir/Game.cpp.obj: ../SDL2/SDL_atomic.h
