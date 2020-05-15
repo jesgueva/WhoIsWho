@@ -18,14 +18,16 @@ private:
     bool isDead;
     bool isMarried;
     CharacterType type;
+    string picPath;
 
 public:
-    Character(string name, string origin, bool isDead, bool isMarried, CharacterType type){
+    Character(string name, string origin, bool isDead, bool isMarried, CharacterType type, string path){
         this->name = name;
         this->origin = origin;
         this->isDead = isDead;
         this->isMarried = isMarried;
         this->type = type;
+        this->picPath = path;
     }
 
     Character(){
@@ -39,12 +41,20 @@ public:
         this->name = name;
     }
 
+    bool nameEquals(string name){
+        return this->name == name;
+    }
+
     string getOrigin(){
         return origin;
     }
 
     void setOrigin(string origin){
         this->origin = origin;
+    }
+
+    bool OriginEquals(string origin){
+        return this->origin == origin;
     }
 
     bool getIsDead(){
@@ -78,6 +88,8 @@ public:
     void setIsMarried(string isMarried){
         this->isMarried = stringToBool(isMarried);
     }
+
+
     CharacterType getType(){
         return type;
     }
@@ -93,6 +105,33 @@ public:
             throw invalid_argument(type + " wrong input");
         }
     }
+    CharacterType ConvertsetType(string type){
+        if(type == "Actor" || type == "actor"){
+            return  actor;
+        } else if(type == "Singer" || type == "singer"){
+            return singer;
+        } else{
+            throw invalid_argument(type + " wrong input");
+        }
+    }
+
+    bool typeEquals(string type){
+        return this->type == ConvertsetType(type);
+    }
+
+    void setPicPath(string path){
+        picPath = path;
+    }
+
+    string getPicPath(){
+        return picPath;
+    }
+
+
+    virtual bool genEquals(string gen){
+        return false;
+    }
+    virtual bool numWinsEquals(int){return false;}
 
     virtual void print(){
         cout<<"Name: " << name << " Origin: " << origin << " isDead: " << isDead << " isMarried: " << isMarried << " type: " << type<<endl;
@@ -100,8 +139,7 @@ public:
 };
 
 class Singer:public Character{
-//public:
-//    string GenreString[4] = {"Rap", "R&B", "Rock", "Pop"};
+
 private:
 
     string gen;
@@ -111,16 +149,17 @@ public:
     Singer(){
 
     }
-    Singer(string name, string origin, bool isDead, bool isMarried, CharacterType type, string gen, int grammyAwards):Character(name, origin, isDead, isMarried, type){
+    Singer(string name, string origin, bool isDead, bool isMarried, CharacterType type, string path, string gen, int grammyAwards):Character(name, origin, isDead, isMarried, type, path){
         this->gen = gen;
         this->grammyAwards = grammyAwards;
     }
-    Singer(string name, string origin, string isDead, string isMarried, string type, string gen, int grammyAwards){
+    Singer(string name, string origin, string isDead, string isMarried, string type, string path, string gen, int grammyAwards){
         setName(name);
         setOrigin(origin);
         setIsDead(isDead);
         setIsMarried(isMarried);
         setType(type);
+        setPicPath(path);
         this->gen = gen;
         this->grammyAwards = grammyAwards;
     }
@@ -129,6 +168,10 @@ public:
     }
     void setGenre(string genre){
         gen = genre;
+    }
+
+    bool genEquals(string gen){
+        return this->gen == gen;
     }
 
     int getGrammyAwards(){
@@ -139,16 +182,20 @@ public:
         grammyAwards = numGrammyAwards;
     }
 
+    bool numWinsEquals(int num){
+        return grammyAwards == num;
+    }
+
+
+
     void print(){
-        cout<<"Name12: " << getName() << " Origin: " << getOrigin() << " isDead: " << getIsDead() << " isMarried: " << getIsMarried() << " type: " << getType()
+        cout<<"Name: " << getName() << " Origin: " << getOrigin() << " isDead: " << getIsDead() << " isMarried: " << getIsMarried() << " type: " << getType()
         << " Genre: " << gen << " GrammyAwards: " << grammyAwards <<endl;
     }
 
 };
 
 class Actor:public Character{
-//public:
-//    string Genre[5] = {"Action", "Reality TV", "Comedy", "Drama"};
 private:
 
     string gen;
@@ -158,16 +205,17 @@ public:
     Actor():Character(){
 
     }
-    Actor(string name, string origin, bool isDead, bool isMarried, CharacterType type, string gen, int oscars):Character(name, origin, isDead, isMarried, type){
+    Actor(string name, string origin, bool isDead, bool isMarried, CharacterType type, string path, string gen, int oscars):Character(name, origin, isDead, isMarried, type, path){
         this->gen = gen;
         this->oscars = oscars;
     }
-    Actor(string name, string origin, string isDead, string isMarried, string type, string gen, int oscars){
+    Actor(string name, string origin, string isDead, string isMarried, string type, string path, string gen, int oscars){
         setName(name);
         setOrigin(origin);
         setIsDead(isDead);
         setIsMarried(isMarried);
         setType(type);
+        setPicPath(path);
         this->gen = gen;
         this->oscars = oscars;
     }
@@ -178,12 +226,19 @@ public:
         gen = genre;
     }
 
+    virtual bool genEquals(string gen){
+        return this->gen == gen;
+    }
+
     int getOscars(){
         return oscars;
     }
 
     void setOscars(int numoscars){
         oscars = numoscars;
+    }
+    bool numWinsEquals(int num){
+        return oscars == num;
     }
 
     void print(){
